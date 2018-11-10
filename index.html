@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="menu">
+<div class="menu__icon">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+</div>
+
+  <div class="menu">
+  <div class="  menu__links">
+    <a class="menu__links-item" href="#">Item 1</a>
+    <a class="menu__links-item" href="#">Item 2</a>
+    <a class="menu__links-item" href="#">Item 3</a>
+    <a class="menu__links-item" href="#">Item 4</a>
+    <a class="menu__links-item" href="#">Item 5</a>
+  </div>
+</div>
+</div>
+
+<p class=description>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores minima, vero illo sequi incidunt libero tempore? Laudantium, fugit. Enim.
+</p>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+
+<script>
+(function($){
+  $(function() {
+    $('.menu__icon').on('click', function() {
+      $(this).closest('.menu')
+        .toggleClass('menu_state_open');
+    });
+    
+    $('.menu__links-item').on('click', function() {
+      // do something
+
+      $(this).closest('.menu')
+        .removeClass('menu_state_open');
+    });
+  });
+})(jQuery);
+</script>
+
+</body>
+</html>
